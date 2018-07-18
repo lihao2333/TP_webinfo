@@ -271,78 +271,20 @@ text-decoration: line-through;
               </form>				</div>
               <div class="header-logo header-logo-top"><a href="http://www.metroparks.net/"></a></div>
               <nav id="site-navigation" class="main-navigation" role="navigation">
-                <div class="menu-top-navigation-container"><ul id="menu-top-navigation" class="menu"><li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42"><a href="http://www.metroparks.net/about-us/">About Us</a>
+                <div class="menu-top-navigation-container"><ul id="menu-top-navigation" class="menu">
+                    <!--xxx-->
+                    {% for item in menu %}
+                    <!--xxx-->
+                    <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42"><a href="http://www.metroparks.net/about-us/">{{item.sec}}</a>
                       <ul class="sub-menu">
-                        <li id="menu-item" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7949"><a href="http://www.metroparks.net/wp-content/uploads/2016/11/The-Plan.pdf">THE PLAN</a></li>
-                        <li id="menu-item-6920" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6920"><a target="_blank" href="http://www.metroparks.net/blog/">BLOG</a></li>
-                        <li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408"><a href="http://www.metroparks.net/about-us/board-meetings/">Board Meetings</a></li>
-                        <li id="menu-item-410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410"><a href="http://www.metroparks.net/about-us/contact-us/">Contact Us</a></li>
-                        <li id="menu-item-411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-411"><a href="http://www.metroparks.net/about-us/contract-bidding/">Contract Bidding</a></li>
-                        <li id="menu-item-12268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12268"><a href="https://web1.vermontsystems.com/wbwsc/ohfranklinctywt.wsc/">Facility &amp; Program Reservations</a></li>
-                        <li id="menu-item-412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-412"><a href="http://www.metroparks.net/about-us/finance/">Finance</a></li>
-                        <li id="menu-item-3775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3775"><a href="http://www.metroparks.net/about-us/friends-metro-parks/">Friends of Metro Parks</a></li>
-                        <li id="menu-item-414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-414"><a href="http://www.metroparks.net/about-us/job-opportunities/">Job Opportunities</a></li>
-                        <li id="menu-item-3036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3036"><a href="http://www.metroparks.net/about-us/natural-resource-management/">Natural Resources</a></li>
-                        <li id="menu-item-6704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6704"><a href="http://www.metroparks.net/about-us/newsletter-sign-up/">Newsletter Sign-up</a></li>
-                        <li id="menu-item-3513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3513"><a href="http://www.metroparks.net/about-us/park-projects/">Park Projects</a></li>
-                        <li id="menu-item-1549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1549"><a href="http://www.metroparks.net/about-us/parkscope/">Parkscope</a></li>
-                        <li id="menu-item-4915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4915"><a href="http://www.metroparks.net/about-us/metro-parks-privacy-policy/">Privacy Policy</a></li>
-                        <li id="menu-item-2386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2386"><a href="http://www.metroparks.net/about-us/rules-regulations/">Rules and Regulations</a></li>
-                        <li id="menu-item-4584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4584"><a href="http://www.metroparks.net/about-us/surplus-equipment/">Surplus Equipment</a></li>
+                        {% for subitem in item.subsec%}
+                        <li id="menu-subitem" class="menu-subitem menu-subitem-type-custom menu-subitem-object-custom menu-subitem-7949"><a href="{{subitem.url}}">{{subitem.name}}</a></li>
+                        {% endfor %}
                       </ul>
                     </li>
-                    <li id="menu-item-41" class="drop-two-col menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41"><a href="http://www.metroparks.net/parks-and-trails/">Parks &amp; Trails</a>
-                      <ul class="sub-menu">
-                        <li id="menu-item-9717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9717"><a href="http://www.metroparks.net/parks-and-trails/park-directions/">Park Directions</a></li>
-                        <li id="menu-item-9718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9718"><a href="http://www.metroparks.net/parks-and-trails/park-locations-map/">Park Locations Map</a></li>
-                        <li id="menu-item-12559" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12559"><a target="_blank" href="https://myhikes.org/">Interactive Trail Maps</a></li>
-                        <li id="menu-item-391" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391"><a href="http://www.metroparks.net/parks-and-trails/pickerington-ponds/">Pickerington Ponds</a></li>
-                        <li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://www.metroparks.net/parks-and-trails/battelle-darby-creek/">Battelle Darby Creek</a></li>
-                        <li id="menu-item-392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392"><a href="http://www.metroparks.net/parks-and-trails/prairie-oaks/">Prairie Oaks</a></li>
-                        <li id="menu-item-382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382"><a href="http://www.metroparks.net/parks-and-trails/blacklick-woods/">Blacklick Woods</a></li>
-                        <li id="menu-item-13332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13332"><a href="http://www.metroparks.net/parks-and-trails/quarry-trails/">Quarry Trails</a></li>
-                        <li id="menu-item-383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-383"><a href="http://www.metroparks.net/parks-and-trails/blacklick-woods-golf-course/">Blacklick Woods Golf Course</a></li>
-                        <li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-891"><a href="http://www.metroparks.net/parks-and-trails/rocky-fork/">Rocky Fork</a></li>
-                        <li id="menu-item-384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-384"><a href="http://www.metroparks.net/parks-and-trails/blendon-woods/">Blendon Woods</a></li>
-                        <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="http://www.metroparks.net/parks-and-trails/scioto-audubon/">Scioto Audubon</a></li>
-                        <li id="menu-item-385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-385"><a href="http://www.metroparks.net/parks-and-trails/chestnut-ridge/">Chestnut Ridge</a></li>
-                        <li id="menu-item-6550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6550"><a href="http://www.metroparks.net/parks-and-trails/scioto-grove/">Scioto Grove</a></li>
-                        <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="http://www.metroparks.net/parks-and-trails/clear-creek/">Clear Creek</a></li>
-                        <li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393"><a href="http://www.metroparks.net/parks-and-trails/sharon-woods/">Sharon Woods</a></li>
-                        <li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="http://www.metroparks.net/parks-and-trails/glacier-ridge/">Glacier Ridge</a></li>
-                        <li id="menu-item-394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394"><a href="http://www.metroparks.net/parks-and-trails/slate-run/">Slate Run</a></li>
-                        <li id="menu-item-388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388"><a href="http://www.metroparks.net/parks-and-trails/heritage-trail-park/">Heritage Trail Park</a></li>
-                        <li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-395"><a href="http://www.metroparks.net/parks-and-trails/slate-run-historical-farm/">Slate Run Living Historical Farm</a></li>
-                        <li id="menu-item-389" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-389"><a href="http://www.metroparks.net/parks-and-trails/highbanks/">Highbanks</a></li>
-                        <li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396"><a href="http://www.metroparks.net/parks-and-trails/three-creeks/">Three Creeks</a></li>
-                        <li id="menu-item-5119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5119"><a href="http://www.metroparks.net/parks-and-trails/homestead/">Homestead</a></li>
-                        <li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-397"><a href="http://www.metroparks.net/parks-and-trails/walnut-woods/">Walnut Woods</a></li>
-                        <li id="menu-item-390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-390"><a href="http://www.metroparks.net/parks-and-trails/inniswood-metro-gardens/">Inniswood Metro Gardens</a></li>
-                        <li id="menu-item-2672" class="menu-trail menu-item menu-item-type-post_type menu-item-object-page menu-item-2672"><a href="http://www.metroparks.net/parks-and-trails/greenway-trails/">Greenway Trails</a></li>
-                      </ul>
-                    </li>
-                    <li id="menu-item-63" class="header-logo menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-52 current_page_item menu-item-63"><a href="http://www.metroparks.net/">&nbsp;</a></li>
-                    <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40"><a href="http://www.metroparks.net/shelters-and-lodges/">Shelters &amp; Lodges</a>
-                      <ul class="sub-menu">
-                        <li id="menu-item-446" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-446"><a href="https://web1.vermontsystems.com/wbwsc/ohfranklinctywt.wsc/search.html?display=detail&amp;module=FR">Reservable Shelters &amp; Lodges</a></li>
-                        <li id="menu-item-444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-444"><a href="http://www.metroparks.net/shelters-and-lodges/non-reservable/">Non-Reservable Shelters &amp; Lodges</a></li>
-                        <li id="menu-item-12270" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12270"><a href="https://web1.vermontsystems.com/wbwsc/ohfranklinctywt.wsc/">Reservations</a></li>
-                      </ul>
-                    </li>
-                    <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-39"><a href="http://www.metroparks.net/programs-and-activities/">Programs &amp; Activities</a>
-                      <ul class="sub-menu">
-                        <li id="menu-item-4064" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4064"><a href="https://web1.vermontsystems.com/wbwsc/ohfranklinctywt.wsc/search.html?display=detail&amp;module=AR&amp;sort=BeginDate">Programs Search</a></li>
-                        <li id="menu-item-12286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12286"><a href="https://web1.vermontsystems.com/wbwsc/ohfranklinctywt.wsc/search.html?module=AR&amp;type=CAMP">Summer Camps</a></li>
-                        <li id="menu-item-2384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2384"><a href="http://www.metroparks.net/programs-and-activities/programs/">Programs Information</a></li>
-                        <li id="menu-item-2359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2359"><a href="http://www.metroparks.net/programs-and-activities/park-activities/">Park Activities</a></li>
-                        <li id="menu-item-7494" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7494"><a href="http://tiny.cc/pet-trails">Fenced-in Dog Parks &amp; Pet Trails</a></li>
-                        <li id="menu-item-7414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7414"><a href="http://www.metroparks.net/programs-and-activities/friends-tree-bench-program/">Friends Tree &amp; Bench Program</a></li>
-                        <li id="menu-item-12481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12481"><a href="http://www.metroparks.net/programs-and-activities/geocaching-metro-parks/">Geocaching</a></li>
-                        <li id="menu-item-12973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12973"><a href="http://www.metroparks.net/wp-content/uploads/2018/02/2018TramFlyer.pdf">Tram Schedule</a></li>
-                        <li id="menu-item-449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-449"><a href="http://www.metroparks.net/programs-and-activities/volunteers/">Volunteering</a></li>
-                      </ul>
-                    </li>
-                  </ul></div>				</nav><!-- #site-navigation -->
+                    {%endfor%}
+
+
           </div>
         </header><!-- #masthead -->
         <div class="visible-print" id="print-addon">
