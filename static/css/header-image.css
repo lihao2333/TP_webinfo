@@ -1,0 +1,43 @@
+/* 
+** Use this file to set the default header
+** image for when a page does not specify its
+** own image.
+*/
+
+/* Extra small screens 480px by 900px*/
+
+.ftr-img {
+    background: url('/wp-content/uploads/2014/10/feature-image-home6-480x900.jpg')
+}
+
+/* Small screens 640px by 900px */
+
+@media screen and (min-width: 321px) {
+    .ftr-img {
+        background: url('/wp-content/uploads/2014/10/feature-image-home6-640x900.jpg')
+    }
+}
+
+/* Medium size screens */
+
+@media screen and (min-width: 641px) {
+    .ftr-img {
+        background: url('/wp-content/uploads/2014/10/feature-image-home6-1024x900.jpg')
+    }
+}
+
+/* Medium large screens 1400px by 900px */
+
+@media screen and (min-width: 960px) {
+    .ftr-img {
+        background: url('/wp-content/uploads/2014/10/feature-image-home6-1400x900.jpg')
+    }
+}
+
+/* Full size image 2200px by 900px */
+
+@media screen and (min-width: 1300px) {
+    .ftr-img {
+        background: url('/wp-content/uploads/2014/10/feature-image-home6.jpg')
+    }
+}
