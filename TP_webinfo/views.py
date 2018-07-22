@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.conf import settings
-from navigation.models import Section, Subsection
+from navigation.models import Section, Subsection,Block
 def index(request):
     sections = Section.objects.all()
     subsections = Subsection.objects.all()
+    blocks = Block.objects.all()
     ctx = {"sections":sections,
-            "subsections":subsections}
+            "subsections":subsections,
+            "blocks":blocks}
 #    As = [
 #            {"name":"a1","id":1,"url":"https://www.baidu.com"},
 #            {"name":"a2","id":2,"url":"https://www.baidu.com"},
