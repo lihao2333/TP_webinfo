@@ -273,12 +273,14 @@ text-decoration: line-through;
               <nav id="site-navigation" class="main-navigation" role="navigation">
                 <div class="menu-top-navigation-container"><ul id="menu-top-navigation" class="menu">
                     <!--xxx-->
-                    {% for item in menu %}
+                    {% for section in sections %}
                     <!--xxx-->
-                    <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42"><a href="http://www.metroparks.net/about-us/">{{item.sec}}</a>
+                    <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42"><a href="http://www.metroparks.net/about-us/">{{section.name}}</a>
                       <ul class="sub-menu">
-                        {% for subitem in item.subsec%}
-                        <li id="menu-subitem" class="menu-subitem menu-subitem-type-custom menu-subitem-object-custom menu-subitem-7949"><a href="{{subitem.url}}">{{subitem.name}}</a></li>
+                        {% for subsection in subsections%}
+                        {% if subsection.section == section %}
+                        <li id="menu-subitem" class="menu-subitem menu-subitem-type-custom menu-subitem-object-custom menu-subitem-7949"><a href="{{subsection.url}}">{{subsection.name}}</a></li>
+                        {% endif %}
                         {% endfor %}
                       </ul>
                     </li>
