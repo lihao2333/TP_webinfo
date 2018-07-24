@@ -49,8 +49,9 @@ windows:
       panes:
         - cd static
         - cd static&&tree -L 1
-  - reference:
+  - navigation:
       layout: even-horizontal
       panes:
-        - cd /home/geek/Proj/Intel/neutrul-style/neural_web&&ls
+        - cd navigation
+        -
 

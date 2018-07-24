@@ -14,8 +14,7 @@ def index(request):
 #            {"name":"a2","id":2,"url":"https://www.baidu.com"},
 #            ]
 #    Bs = [
-#            {"name":"b1","id":1,"url":"https://www.baidu.com"},
-#            {"name":"b2","id":2,"url":"https://www.baidu.com"},
+#            {"name":"b1","id":1,"url":"https://www.baidu.com"}, #            {"name":"b2","id":2,"url":"https://www.baidu.com"},
 #            ]
 #    Cs = [
 #            {"name":"c1","id":1,"url":"https://www.baidu.com"},
@@ -38,3 +37,18 @@ def index(request):
 #            ]
 #        }
     return render(request,"index.html",ctx)
+def content(request,subsection_id):
+    cur_subsection = Subsection.objects.filter(id=subsection_id)[0]
+    cur_section = Section.objects.filter(id=cur_subsection.section.id)[0]
+    cur_content = cur_subsection.content.replace('\r\n','\\n')
+    sections = Section.objects.all()
+    subsections = Subsection.objects.all()
+    ctx = {"cur_section":cur_section,
+            "cur_subsection":cur_subsection,
+            "cur_content":cur_content,
+            "sections":sections,
+            "subsections":subsections
+            }
+    return render(request,"content.html",ctx)
+#    return HttpResponse("%d"%content_id)
+

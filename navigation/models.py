@@ -11,6 +11,7 @@ class Subsection(models.Model):
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
     url = models.CharField(max_length=50)
+    content = models.TextField()
 class Block(models.Model):
     image = models.ImageField(upload_to="block")
     title = models.CharField(max_length=20)
