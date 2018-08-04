@@ -18,4 +18,9 @@ class Block(models.Model):
     content = models.CharField(max_length=20)
     def __str__(self):
         return self.title
-
+class Main(models.Model):
+    title = models.CharField(max_length=50)
+    welcome = models.CharField(max_length=50)
+    welcome_sub = models.CharField(max_length=50)
+    def __str__(self):
+        return self.title
