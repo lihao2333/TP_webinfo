@@ -1,0 +1,30 @@
+<div class="featured-section">
+  <div class="featured-bg">
+    <picture>
+    <img srcset="{{main.wallpaper.url}}" style="height:351px;"alt="">
+    </picture>
+    <div class="container wp-page-container home-container">
+      <div class="row">
+        <main class="col-md-11 the-content" role="main">
+        <article id="post-52" class="post-52 page type-page status-publish has-post-thumbnail hentry category-home-page">
+          <div class="entry-content">
+            <div class="row">
+              {% for blk in blocks %}
+              <div class=" col-md-4">
+                <div class="feature"><a href="{{blk.url}}" savefrom_lm_index="2"><div><img src="{{blk.image.url}}" style="height:300px;width:300px"></div></a>
+                  <a href="{{blk.url}}" savefrom_lm_index="0" savefrom_lm="1">
+                    <h4>{{blk.title}}</h4>
+                  </a>
+                  <p>{{blk.content}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div><!-- .entry-content -->
+          {%include "footer.html"%}
+        </article><!-- #post-## -->
+        </main><!--content-->
+      </div><!--row -->
+    </div><!--container -->
+  </div><!--featured-bg-->
+</div><!--featured-section-->

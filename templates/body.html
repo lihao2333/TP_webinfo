@@ -1,0 +1,53 @@
+<div id="body-left" class="col-md-5 col-md-offset-1">
+  <h2 align='center'>今日预告</h2>
+  <!-- Place somewhere in the <body>
+    of your page -->
+    <div class="flexslider">
+      <ul class="slides">
+        {%for subsection in subsections %}
+            {%if subsection.section.name == '今日预告'%}
+        <li>
+          <a href="#">
+            <img src="{{subsection.image.url}}" />
+            <p align='center'>{{subsection.name}}</p>
+          </a>
+        </li> 
+            {%endif%}
+        {%endfor%}
+      </ul>
+    </div>
+</div>
+<div id="body-right" class="col-md-5">
+  <h2 align="center">欢迎来悦橙</h2>
+  <table>
+    {%autoescape off%}
+    {% for subsection in subsections %}
+    {%if subsection.section.name == "欢迎来悦橙"%}
+    {%cycle  "<tr>" "" %}
+      <td><img src="{{subsection.image.url}}">
+        <p>{{subsection.name}}</p><td>
+    {%cycle  "" "</tr>" %}
+    {%endif%}
+    {%endfor%}
+    {%endautoescape%}
+  </table>
+</div>
+<style>
+#body-left,
+#body-right{
+  height:500px;
+}
+#body-left img{
+  height:300px;
+}
+#body-right img{
+  height:120px;
+  width:122px;
+}
+#body-right td{
+  text-align:center;
+}
+#body-right a{
+  color:#fff:
+}
+</style>

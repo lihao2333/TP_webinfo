@@ -1,0 +1,35 @@
+<div id="append" class="col-md-10 col-md-offset-1">
+
+  <h2 align="center">往期活动</h3>
+
+    <div class="flexslider">
+      <ul class="slides">
+  <table>
+    {%autoescape off%}
+    {% for subsection in subsections %}
+    {%if subsection.section.name == "往期活动"%}
+    {%cycle "<li><table>" "" "" "" "" "" %}
+        {%cycle "<tr>" ""%}
+          <td><img src="{{subsection.image.url}}"></td><td>
+        <p>{{subsection.name}}</p></td>
+          {%cycle "" "</tr>"%}
+    {%cycle "" "" "" "" "" "</li></table>" %}
+    {%endif%}
+    {%endfor%}
+    {%endautoescape%}
+  </table>
+
+      </ul>
+    </div>
+</div>
+<style>
+#append{height:520px;}
+#append img{height:100px;width:100px;margin:0px;padding:0px;}
+ td{text-align:left;}
+ #append td{padding:0;margin:0;}
+ #append td:nth-child(1){width:15%;}
+ #append td:nth-child(2){width:35%;}
+ #append td:nth-child(3){width:15%;}
+ #append td:nth-child(4){width:35%;}
+
+</style>

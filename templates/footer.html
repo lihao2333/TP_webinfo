@@ -1,0 +1,22 @@
+{%load staticfiles%}
+<div id="footer" class="col-md-10 col-md-offset-1" >
+<footer  style="height:260px;">
+  <div class="col-md-6" style="padding:10px 0 0 20px ">
+    <h3>联系我们</h3>
+    <p><img id="footer-icon-add" src="{%static 'images/add.png'%}" >地址:{{main.address}} </p>
+    <p><img id="footer-icon-tele" src="{%static 'images/tele.png'%}"  >电话:{{main.tele}} </p>
+    <p><img id="footer-icon-weibo" src="{%static 'images/weibo.png'%}"  >微博:<a id="weibo-a" href="{{main.weibo}}" >{%autoescape off%}{{main.weibo}}{%endautoescape%}</a> </p>
+  </div>
+  <div class="col-md-3" style="padding:40px 0 0 0">
+    <img id='twodcode' src="{%static 'images/2dcode-kefu.jpg'%}" >
+    <p>&emsp;&emsp;客服二维码</p>
+  </div>
+  <div class="col-md-3" style="padding:40px 0 0 0">
+    <img id='twodcode' src="{%static 'images/2dcode-weixin.jpg'%}" >
+    <p>&emsp;微信公众号二维码</p>
+  </div>
+</footer>
+</div>
+<style>
+#footer{height:150px;background-color:green;padding:0;}
+</style>

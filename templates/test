@@ -1,0 +1,6 @@
+
+        {%cycle "<li><table>" "" "" "" "" ""%}
+            {%cycle "<tr>" ""%}
+              <td><img src="{{subsection.image}}"></td><td>{{subsection.name}}</td>
+            {%cycle "" "</tr>"%}
+        {%cycle "" "" "" "" "" "</table></li>"%}

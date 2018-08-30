@@ -1,0 +1,28 @@
+footer{
+  background-color:#3c3c3c;
+  color:white;
+}
+#footer-icon-add,
+#footer-icon-tele,
+#footer-icon-email,
+#footer-icon-weibo
+{
+width:15px;
+height:10px;
+margin-right:10px;
+margin-left:10px;
+}
+
+#twodcode
+{
+  height:160px;
+  width:160px;
+}
+#weibo-a{
+  color:#fff;
+  font-size:15px;
+  transition:color 1s ease;
+}
+#weibo-a:hover{
+  color:#bbb;
+}
