@@ -206,13 +206,69 @@ text-decoration: line-through;
   <link rel="apple-touch-icon" sizes="76x76" href="http://www.metroparks.net/touch-icon-ipad.png">
   <link rel="apple-touch-icon" sizes="120x120" href="http://www.metroparks.net/touch-icon-iphone-retina.png">
   <link rel="apple-touch-icon" sizes="152x152" href="http://www.metroparks.net/touch-icon-ipad-retina.png">
-  <body class="page-template-default page page-id-19 page-parent group-blog" style="position: relative; min-height: 100%; top: 0px;background-image:url('/static/images/wall4.jpg');background-size:100% 500%;background-position:center;background-repeat:no-repeat;">
-    {%include 'cover.html'%}
-    <div class="col-md-10 col-md-offset-1" style="background-color:rgba(0,0,0,0.3);border:rgba(0,0,0,0.8);color:white;">
-    <div class="mp-wrap">
+  <body class="page-template-default page page-id-19 page-parent group-blog" style="position: relative; min-height: 100%; top: 0px;">
+    <div class="col-md-10 col-md-offset-1">
+
+    <div class="alert alert-bar alert-bar-all show-alerts" style="display:none;" role="alert">
+      <button id="dismiss-global" type="button" class="close">DISMISS<span class="fa fa-times-circle-o"></span></button>
+      <div class="container">
+        <div class="alerts-all">
+
+        </div>
+      </div>
+    </div>	<div class="mp-wrap">
+      <header class="site-header" role="banner">
+        <div class="header-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 hidden-sm hidden-xs">
+                <div class="topbar-widget text-right">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-of" style="height: 203px;">
+          <div id="bgBlur" class="header-bg ftr-img" style="height: 209px;">
+          </div>
+          <div class="header-ol" style="height: 203px;">
+          </div>
+        </div>
+        <div class="container header-container" style="margin-top: 60px;">
+            <div class="header-logo header-logo-top"><a href="http://www.metroparks.net/"></a></div>
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+              <div class="menu-top-navigation-container"><ul id="menu-top-navigation" class="menu">
+
+                    <!--xxx-->
+                    {% for section in sections %}
+                    <!--xxx-->
+                    {% if forloop.counter0 == 20 %}
+                     <li id="menu-item-63" class="header-logo menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-    item page_item page-item-52 current_page_item menu-item-63"><a href="http://www.metroparks.net/"></a></li>   
+                    {% endif %}
+
+                    <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42"><a href="#">{{section.name}}</a>
+                      <ul class="sub-menu">
+                        {% for subsection in subsections%}
+                        {% if subsection.section == section %}
+                        <li id="menu-subitem" class="menu-subitem menu-subitem-type-custom menu-subitem-object-custom menu-subitem-7949"><a href="/content/{{subsection.id}}">{{subsection.name}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                      </ul>
+                    </li>
+                    {%endfor%}
+        </div>
+      </header><!-- #masthead -->
+      <div class="visible-print" id="print-addon">
+        <img src="./About Us - Metro Parks - Central Ohio Park System_files/MP-logo-web-blue-300px.png" style="height: 100px; weight: 100px" id="print-logo">
+      </div>
+      <style type="text/css">
+header.site-header {position:relative;}
+.ie .header-of .header-bg {display: block !important;}
+      </style>
       <div class="container wp-page-container">
         <div class="breadcrumbs clearfix">
-          <p id="breadcrumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title" style="color:white">Home</a> 
+          <p id="breadcrumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="/" rel="v:url" property="v:title">Home</a> 
              >
                {{cur_section.name}}</span></span></span></p>	
         </div>

@@ -46,11 +46,13 @@ def content(request,subsection_id):
     cur_content = cur_subsection.content.replace('\r\n','\\n')
     sections = Section.objects.all()
     subsections = Subsection.objects.all()
+    main = Main.objects.all()[0]
     ctx = {"cur_section":cur_section,
             "cur_subsection":cur_subsection,
             "cur_content":cur_content,
             "sections":sections,
-            "subsections":subsections
+            "subsections":subsections,
+            "main":main
             }
     return render(request,"content.html",ctx)
 #    return HttpResponse("%d"%content_id)
