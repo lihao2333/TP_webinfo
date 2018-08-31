@@ -309,10 +309,13 @@ header.site-header {position:relative;}
 
 <script>
 var converter = new showdown.Converter(),
-	text = '{{cur_content}}'
-    text = text.replace("&gt;",">")
-    text = text.replace("&gt;&gt;",">>")
-    text = text.replace("&gt;&gt;&gt;",">>>")
+	text = '{{cur_content}}';
+    text = text.replace("&quot;",'"');
+    text = text.replace("&gt;",">");
+    text = text.replace("&lt;","<");
+    text = text.replace("&gt;&gt;",">>");
+    text = text.replace("&gt;&gt;&gt;",">>>");
     html      = converter.makeHtml(text);
+    console.log(html);
     document.getElementById("cur_subsection_content").innerHTML = html;
 </script>

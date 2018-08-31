@@ -10,8 +10,16 @@
     {%if subsection.section.name == "往期活动"%}
     {%cycle "<li><table>" "" "" "" "" "" %}
         {%cycle "<tr>" ""%}
-          <td><img src="{{subsection.image.url}}"></td><td>
-        <p>{{subsection.name}}</p></td>
+          <td>
+            <a href="/content/{{subsection.id}}"> 
+            <div class='col-md-3'>
+            <a href="/content/{{subsection.id}}"> <img src="{{subsection.image.url}}">
+            </div>
+            <div class='col-md-9'>
+            <h3>{{subsection.name}}</h3><p>{{subsection.subname|default:" "|truncatechars:50}}</p>
+            </div>
+            </a>
+          </td>
           {%cycle "" "</tr>"%}
     {%cycle "" "" "" "" "" "</li></table>" %}
     {%endif%}
@@ -23,13 +31,13 @@
     </div>
 </div>
 <style>
-#append{height:520px;}
+#append{height:520px;background-color:rgba(0,0,0,0.6);}
+#append h2,p,h3{color:white;}
 #append img{height:100px;width:100px;margin:0px;padding:0px;}
  td{text-align:left;}
- #append td{padding:0;margin:0;}
- #append td:nth-child(1){width:15%;}
- #append td:nth-child(2){width:35%;}
- #append td:nth-child(3){width:15%;}
- #append td:nth-child(4){width:35%;}
+ #append td{padding:0;margin:0;width:50%;}
+ #append table{background-color:none;}
+ #append td:hover{background-color:rgba(64,224,208,0.4);transform:scale(1.01);}
+ 
 
 </style>

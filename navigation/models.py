@@ -10,6 +10,7 @@ class Subsection(models.Model):
         return self.name
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
+    subname = models.CharField(max_length=30,null=True, default="", blank=True)
     image = models.ImageField(upload_to="subsection",null=True ,default=None, blank=True)
     content = models.TextField()
 class Block(models.Model):
@@ -18,6 +19,10 @@ class Block(models.Model):
     content = models.CharField(max_length=20)
     def __str__(self):
         return self.title
+class Images(models.Model):
+    image = models.ImageField(upload_to="images")
+    def __str__(self):
+        return str(self.id)
 class Main(models.Model):
     title = models.CharField(max_length=50)
     welcome = models.CharField(max_length=50)

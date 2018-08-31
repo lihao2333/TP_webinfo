@@ -1,13 +1,13 @@
 <div id="body-left" class="col-md-5 col-md-offset-1">
-  <h2 align='center'>今日预告</h2>
+  <h2 align='center'>活动预告</h2>
   <!-- Place somewhere in the <body>
     of your page -->
     <div class="flexslider">
       <ul class="slides">
         {%for subsection in subsections %}
-            {%if subsection.section.name == '今日预告'%}
+            {%if subsection.section.name == '活动预告'%}
         <li>
-          <a href="#">
+          <a href="/content/{{subsection.id}}">
             <img src="{{subsection.image.url}}" />
             <p align='center'>{{subsection.name}}</p>
           </a>
@@ -24,8 +24,11 @@
     {% for subsection in subsections %}
     {%if subsection.section.name == "欢迎来悦橙"%}
     {%cycle  "<tr>" "" %}
-      <td><img src="{{subsection.image.url}}">
-        <p>{{subsection.name}}</p><td>
+      <td>
+        <a href="/content/{{subsection.id}}">
+          <img src="{{subsection.image.url}}">
+          <p>{{subsection.name}}</p>
+        </a><td>
     {%cycle  "" "</tr>" %}
     {%endif%}
     {%endfor%}
@@ -36,7 +39,11 @@
 #body-left,
 #body-right{
   height:500px;
+  background-color:rgba(0,0,0,0.6);
 }
+#body-left h2{color:white;}
+#body-right h2{color:white;}
+#body-right p{color:white;}
 #body-left img{
   height:300px;
 }
@@ -49,5 +56,9 @@
 }
 #body-right a{
   color:#fff:
+}
+#body-right td:hover{
+  transform:scale(1.01);
+    background-color:rgba(64,224,208,0.4);
 }
 </style>
